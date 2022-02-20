@@ -1,0 +1,63 @@
+.menu
+  height: 35px
+  width: 35px
+  background-color: #2196f3
+  border-radius: 50%
+  border: 2px solid #ffffff
+  padding: 0 0 0
+  box-shadow: 0px 0px 3px #082103
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  position: relative
+  z-index: 2
+
+  &:hover
+    box-shadow: 0px 0px 5px #ffffff
+
+.hamburger
+  position: absolute
+  transform: translateY(-50%)
+  top: 50%
+  width: 25px
+  height: 3px
+  background-color: white
+  z-index: 2
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 25px
+    height: 3px
+    background-color: white
+
+  &:before
+    top: 7px
+
+  &:after
+    top: -7px
+
+.hamburgerActive
+  background-color: rgba(0, 0, 0, 0)
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 25px
+    height: 3px
+    background-color: white
+
+  &:before
+    top: 0
+    transform: translateY(-50%)
+    transform: rotate(135deg)
+    transition-property: transformY, rotate
+    transition: 0.2s
+
+  &:after
+    top: 0
+    transform: translateY(-50%)
+    transform: rotate(-135deg)
+    transition-property: transformY, rotate
+    transition: 0.2s

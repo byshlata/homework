@@ -1,0 +1,53 @@
+$colorGreenButton: greenyellow
+$colorBluButton: #2196f3
+$colorRedButton: red
+
+
+.button, .defaultButton, .disabledButton
+  letter-spacing: 1px
+  text-transform: uppercase
+  font-size: 6px
+  width: 50px
+  height: 20px
+  overflow: hidden
+  box-sizing: border-box
+  border: 1px solid $colorGreenButton
+  background-color: #333
+  box-shadow: 0px 0px 3px $colorGreenButton
+  border-radius: 3px
+  color: $colorGreenButton
+  cursor: pointer
+
+  &:active:hover
+    box-shadow: 0 0 1px $colorGreenButton, 0 0 3px $colorGreenButton, 0 0 10px $colorGreenButton
+    transform: scale(0.9)
+
+  &:hover
+    box-shadow: 0 0 1px $colorGreenButton, 0 0 2px $colorGreenButton, 0 0 4px $colorGreenButton
+
+.defaultButton
+  box-shadow: 0px 0px 3px $colorBluButton
+  border: 1px solid $colorBluButton
+  border-radius: 3px
+  color: $colorBluButton
+
+  &:active:hover
+    box-shadow: 0 0 1px $colorBluButton, 0 0 3px $colorBluButton, 0 0 10px $colorBluButton
+    transform: scale(0.9)
+
+  &:hover
+    box-shadow: 0 0 1px $colorBluButton, 0 0 2px $colorBluButton, 0 0 4px $colorBluButton
+
+.disabledButton
+  border: 1px solid $colorRedButton
+  box-shadow: 0px 0px 5px $colorRedButton
+  opacity: 0.5
+  color: $colorRedButton
+
+  &:hover
+    box-shadow: 0px 0px 3px $colorRedButton
+    position: relative
+    cursor: not-allowed
+
+
+

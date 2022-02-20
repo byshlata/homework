@@ -1,0 +1,71 @@
+$borderRadiusRadioActiveColor: #FF1493
+$borderShadowRadiusRadioActiveColor: #FF00FF
+$shadowHoverRadio: #FFFAFA
+$borderRadiusRadioColor: #A9A9A9
+
+.labelStyle, .labelStyleActive
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  opacity: 0.7
+  width: 10px
+  margin: 10px
+  color: #DCDCDC
+  transition: 0.5s
+
+.labelStyleActive
+  color: $borderShadowRadiusRadioActiveColor
+
+
+.inputStyleActive
+  -moz-appearance: none
+  appearance: none
+  transform: scale(1.1)
+  margin: 0
+  border-radius: 50%
+  width: 16px
+  height: 16px
+  border: 2px solid $borderRadiusRadioActiveColor
+  transition: 0.2s all linear
+  outline: none
+  position: relative
+  top: 4px
+  position: relative
+  box-shadow: 0 0 1px $borderShadowRadiusRadioActiveColor, 0 0 3px $borderShadowRadiusRadioActiveColor, 0 0 10px $borderShadowRadiusRadioActiveColor
+  transition: 0.5s
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: inline-block
+    width: 70%
+    height: 70%
+    background-color: $borderShadowRadiusRadioActiveColor
+    border-radius: 50%
+    box-shadow: 0 0 1px $borderShadowRadiusRadioActiveColor, 0 0 1px $borderShadowRadiusRadioActiveColor, 0 0 2px $borderShadowRadiusRadioActiveColor
+    transition: 0.5s
+
+
+.inputStyle
+  -moz-appearance: none
+  appearance: none
+  margin: 0
+  border-radius: 50%
+  width: 16px
+  height: 16px
+  border: 2px solid $borderRadiusRadioColor
+  transition: 0.2s all linear
+  outline: none
+  position: relative
+  top: 4px
+  position: relative
+  transition: 0.5s
+  background-color: $shadowHoverRadio
+  &:hover
+    box-shadow: 0 0 1px $borderShadowRadiusRadioActiveColor, 0 0 2px $borderShadowRadiusRadioActiveColor, 0 0 4px $borderShadowRadiusRadioActiveColor
+    transform: scale(1.05)
+
+

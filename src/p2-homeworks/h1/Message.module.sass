@@ -1,0 +1,83 @@
+$color-message: #082103
+$color-black: #000000
+$color-text: #c4d8bf
+$color-name: #a399b4
+$color-background-message: #333
+
+
+.hw1
+  width: 100%
+
+.message
+  display: flex
+  margin: 0 auto
+  justify-content: space-between
+  align-items: flex-end
+  width: 270px
+
+.link
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 50px
+  height: 50px
+
+
+.avatar
+  width: 100%
+  height: 100%
+  border: 1px solid $color-black
+  border-radius: 50px
+
+.wrapper
+  position: relative
+  margin-left: 15px
+  background-color: $color-message
+  box-sizing: border-box
+  padding: 5px 5px 25px 5px
+  width: 200px
+  border-bottom-right-radius: 10px
+  border-top-right-radius: 10px
+  border-top-left-radius: 10px
+
+  &:before
+    content: ''
+    z-index: 2
+    position: absolute
+    background: $color-message
+    width: 20px
+    height: 20px
+    bottom: 0
+    left: -20px
+
+  &:after
+    content: ''
+    z-index: 3
+    width: 20px
+    height: 20px
+    position: absolute
+    background: $color-background-message
+    left: -20px
+    bottom: 0
+    border-bottom-right-radius: 100%
+
+
+.name
+  color: $color-name
+  margin-bottom: 10px
+
+.text
+  width: 100%
+  height: 100%
+  color: $color-text
+  flex-wrap: wrap
+  overflow-wrap: break-word
+
+.time
+  color: $color-text
+  opacity: 0.4
+  position: absolute
+  bottom: 1%
+  right: 4%
+
+
