@@ -9,7 +9,6 @@ const arr:Array<string>= ['x', 'y', 'z']
 export const HW7 = () => {
     const [value, onChangeOption] = useState<string>(arr[1])
 
-   // console.log(value)
 
     return (
         <div>
