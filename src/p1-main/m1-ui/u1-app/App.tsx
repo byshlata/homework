@@ -5,11 +5,17 @@ import HW2 from "../../../p2-homeworks/h2/HW2";
 import HW4 from "../../../p2-homeworks/h4/HW4";
 import HW3 from "../../../p2-homeworks/h3/HW3";
 import HW5 from "../../../p2-homeworks/h5/HW5";
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../../../p2-homeworks/h10/bll/store";
+import styleTheme from '../../../p2-homeworks/h12/HW12.module.css'
 
 
 function App() {
+
+    const theme = useSelector<AppStoreType, string>(state => state.theme.theme)
+
     return (
-        <div className={s.App}>
+        <div className={styleTheme[theme]}>
             {/*<HW1/>*/}
             {/*<HW2/>*/}
             {/*<HW3/>*/}
